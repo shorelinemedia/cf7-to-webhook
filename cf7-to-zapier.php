@@ -12,6 +12,7 @@
  * Author URI:        http://vizir.com.br/en
  * Text Domain:       cf7-to-webhook
  * Domain Path:       /languages
+ * GitHub Plugin URI: https://github.com/shorelinemedia/cf7-to-webhook
  *
  */
 
