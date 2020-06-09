@@ -136,6 +136,10 @@ Yes! Visit [GitHub repository](https://github.com/Vizir/cf7-to-zapier).
 
 ## Changelog ##
 
+### 2.1.5 ###
+
+* Added 'ctz_can_submit_to_zapier' filter to allow devs to customize if form sends to webhook
+
 ### 2.1.4 ###
 
 * Added 'ctz_hook_url' filter to change webhook URL

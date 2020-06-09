@@ -375,12 +375,13 @@ if ( ! class_exists( 'CFTZ_Module_CF7' ) ) {
          */
         private function can_submit_to_zapier( $contact_form ) {
             $properties = $contact_form->prop( self::METADATA );
+            $can_submit = true;
 
             if ( empty( $properties ) || empty( $properties['activate'] ) || empty( $properties['hook_url'] ) ) {
-                return false;
+                $can_submit = false;
             }
 
-            return true;
+            return apply_filters( 'ctz_can_submit_to_zapier', $can_submit, $contact_form );
         }
 
         /**
