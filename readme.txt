@@ -54,7 +54,7 @@ We would be grateful for a [review here](https://wordpress.org/support/plugin/cf
 
 = Support =
 
-* Contact Form 7 - 5.1.6
+* Contact Form 7 - 5.1
 
 == Installation ==
 
@@ -84,7 +84,7 @@ Yes. We support WordPress 5+ and CF7 too.
 
 = Does it works for forms sent out of CF7? =
 
-Nope. The intention here is to integrate CF7 to Webhook (and another webhooks).
+Nope. The intention here is to integrate CF7 to Zapier (and another webhooks).
 
 = Can I use it without Zapier? =
 
@@ -92,7 +92,7 @@ Yep. We are creating a integration to Zapier webhook, but you can insert any URL
 
 = My sent data is empty =
 
-Please, go to [support forum](https://wordpress.org/support/plugin/cf7-to-webhook/) to get help.
+Please, go to [support forum](https://wordpress.org/support/plugin/cf7-to-zapier/) to get help.
 
 = Who are the developers? =
 
@@ -115,6 +115,12 @@ It's like the "class" option: `[text your-field class:form-control id:field-id w
 
 This will create a text field with name "your-field", class "form-control", id "field-id" and will be sent to webhook with key "webhook-key".
 
+= How I can get the free text value? =
+
+We will replace the value for last option (which is the free_text input) with the value.
+
+This way your webhook will receive the free text value and other options if you allow it (like in checkbox).
+
 = Can I help you? =
 
 Yes! Visit [GitHub repository](https://github.com/Vizir/cf7-to-zapier).
@@ -127,6 +133,16 @@ Yes! Visit [GitHub repository](https://github.com/Vizir/cf7-to-zapier).
 4. Zapier Step 3 - Webhook URL (waiting for first data)
 
 == Changelog ==
+
+= 2.2.0 =
+
+* Support to free_text option on radio and checkboxes.
+
+= 2.1.4 =
+
+* Added 'ctz_hook_url' filter to change webhook URL
+
+Props to @shoreline-chrism
 
 = 2.1.2 =
 
@@ -192,6 +208,9 @@ Yes! Visit [GitHub repository](https://github.com/Vizir/cf7-to-zapier).
 
 == Upgrade Notice ==
 
-= 2.1.2 =
+= 2.2.0 =
 
-Fix checkboxes.
+Support to free_text option on radio and checkboxes.
+
+Now we will replace the value for last option with the "free_text" value.
+So we can support the radio "others" and still receive other selected options for checkboxes.
